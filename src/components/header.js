@@ -20,6 +20,7 @@ export default function Header({ location }) {
             align='center'
             as={Link}
             color='green.50'
+            pr={4}
             py={4}
             to='/'
             transition='color ease-in-out 300ms, background-color ease-in-out 300ms'

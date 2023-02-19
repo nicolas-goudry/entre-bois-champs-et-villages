@@ -27,6 +27,7 @@
     "gatsby": "5.5.0",
     "gatsby-image": "3.11.0",
     "gatsby-plugin-image": "3.5.0",
+    "gatsby-plugin-layout": "4.5.0",
     "gatsby-plugin-sharp": "5.5.0",
     "gatsby-plugin-sitemap": "6.5.0",
     "gatsby-remark-images": "7.5.0",

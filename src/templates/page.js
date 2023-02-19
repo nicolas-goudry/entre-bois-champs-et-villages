@@ -41,7 +41,7 @@ export const pageQuery = graphql`
       cover {
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
       }

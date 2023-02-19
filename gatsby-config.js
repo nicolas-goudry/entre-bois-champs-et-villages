@@ -6,6 +6,7 @@ module.exports = {
     title: `Entre bois, champs et villages`,
     siteUrl: `https://www.entreboischampsetvillages.fr`,
   },
+  trailingSlash: 'never',
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',

@@ -21,9 +21,9 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
+        gatsbyRemarkPlugins: [
           // You need some transformations?
           // Checkout https://www.gatsbyjs.com/plugins/?=gatsby-remark
           // And pick-up some plugins

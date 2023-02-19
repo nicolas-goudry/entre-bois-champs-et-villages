@@ -12,12 +12,23 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-source-google-docs',
       options: {
-        name: 'images',
-        path: './src/images/',
+        folder: '11qX4WVrzjaqiXwv4m4irpJuner7KqrZ3',
+        createPages: true,
+        debug: process.env.NODE_ENV !== 'production',
       },
-      __key: 'images',
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          // You need some transformations?
+          // Checkout https://www.gatsbyjs.com/plugins/?=gatsby-remark
+          // And pick-up some plugins
+          'gatsby-remark-images',
+        ],
+      },
     },
   ],
 }

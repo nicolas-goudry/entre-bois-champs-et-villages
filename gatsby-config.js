@@ -33,6 +33,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
         /**

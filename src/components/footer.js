@@ -6,9 +6,14 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <Box as='footer' bg='blackAlpha.800' color='white'>
-      <Flex align='center' justify='space-between' px={4} py={2} w='100%' minH={36} maxW='6xl' m='auto'>
-        <Link href='https://www.facebook.com/Entreboischampsetvillages/' target='_blank'>
+    <Box as='footer' bg='gray.900' color='white'>
+      <Flex align='center' justify='space-between' m='auto' maxW='6xl' minH={36} px={4} py={2} w='100%'>
+        <Link
+          href='https://www.facebook.com/Entreboischampsetvillages/'
+          target='_blank'
+          transition='color ease-in-out 300ms'
+          _hover={{ color: 'blue.400' }}
+        >
           <FontAwesomeIcon fixedWidth icon={faFacebook} size='2x' />
         </Link>
         <Link as={GatsbyLink} to='/mentions-legales'>

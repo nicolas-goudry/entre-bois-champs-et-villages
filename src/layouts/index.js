@@ -17,42 +17,42 @@ const mdxComponents = {
   },
   h1({ children }) {
     return (
-      <Heading as='h1' size='3xl'>
+      <Heading as='h1' size='xl' mb={6} sx={{ '&:not(:first-of-type)': { mt: 6 } }}>
         {children}
       </Heading>
     )
   },
   h2({ children }) {
     return (
-      <Heading as='h2' size='2xl'>
+      <Heading as='h2' size='lg' mb={6} sx={{ '&:not(:first-of-type)': { mt: 6 } }}>
         {children}
       </Heading>
     )
   },
   h3({ children }) {
     return (
-      <Heading as='h3' size='xl'>
+      <Heading as='h3' size='md' mb={4} sx={{ '&:not(:first-of-type)': { mt: 4 } }}>
         {children}
       </Heading>
     )
   },
   h4({ children }) {
     return (
-      <Heading as='h4' size='lg'>
+      <Heading as='h4' size='md' mb={4} sx={{ '&:not(:first-of-type)': { mt: 4 } }}>
         {children}
       </Heading>
     )
   },
   h5({ children }) {
     return (
-      <Heading as='h5' size='md'>
+      <Heading as='h5' size='sm' mb={2} sx={{ '&:not(:first-of-type)': { mt: 2 } }}>
         {children}
       </Heading>
     )
   },
   h6({ children }) {
     return (
-      <Heading as='h6' size='sm'>
+      <Heading as='h6' size='sm' mb={2} sx={{ '&:not(:first-of-type)': { mt: 2 } }}>
         {children}
       </Heading>
     )

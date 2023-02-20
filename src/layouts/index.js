@@ -4,7 +4,6 @@ import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
 
 import Header from '../components/header'
-import FacebookFeed from '../components/facebook-feed'
 import Footer from '../components/footer'
 
 const mdxComponents = {
@@ -90,7 +89,6 @@ const mdxComponents = {
       </Box>
     )
   },
-  FacebookFeed,
 }
 
 export default function LayoutIndex({ children, location }) {

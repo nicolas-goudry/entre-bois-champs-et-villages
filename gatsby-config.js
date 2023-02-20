@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Entre bois, champs et villages`,
+    title: `Entre Bois, Champs et Villages`,
     siteUrl: `https://www.entreboischampsetvillages.fr`,
   },
   trailingSlash: 'never',

@@ -95,7 +95,7 @@ const mdxComponents = {
 
 export default function LayoutIndex({ children, location }) {
   return (
-    <Flex direction='column' minH='100vh'>
+    <Flex bg='green.50' direction='column' minH='100vh'>
       <Header location={location} />
       <MDXProvider components={mdxComponents}>{children}</MDXProvider>
       <Footer />

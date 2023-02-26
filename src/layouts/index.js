@@ -1,10 +1,12 @@
-import { Box, Divider, Flex, Heading, Link, ListItem, OrderedList, Text, UnorderedList } from '@chakra-ui/react'
+import { Box, Button, Divider, Flex, Heading, Link, ListItem, OrderedList, Text, UnorderedList } from '@chakra-ui/react'
 import { MDXProvider } from '@mdx-js/react'
 import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
 
-import Header from '../components/header'
 import Footer from '../components/footer'
+import Header from '../components/header'
+import PartnersSlideshow from '../components/partners-slideshow'
+import PotCounter from '../components/pot-counter'
 
 const mdxComponents = {
   a({ href, children }) {
@@ -89,6 +91,15 @@ const mdxComponents = {
       </Box>
     )
   },
+  LienBouton({ children, vers, ...props }) {
+    return (
+      <Button colorScheme='green' href={vers} target='_blank' {...props}>
+        {children}
+      </Button>
+    )
+  },
+  CompteurCagnotte: PotCounter,
+  LogosPartenaires: PartnersSlideshow,
 }
 
 export default function LayoutIndex({ children, location }) {

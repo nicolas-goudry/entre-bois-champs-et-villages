@@ -4,7 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
 
-export default function Footer() {
+const FOOTER_NAV = [
+  {
+    href: '/presse',
+    label: 'Presse',
+  },
+  {
+    href: '/mentions-legales',
+    label: 'Mentions légales',
+  },
+]
+export default function Footer({ location }) {
   return (
     <Box as='footer' bg='gray.900' color='white'>
       <Flex align='center' justify='space-between' m='auto' maxW='6xl' minH={36} px={4} py={2} w='100%'>
@@ -16,14 +26,19 @@ export default function Footer() {
         >
           <FontAwesomeIcon fixedWidth icon={faFacebook} size='2x' />
         </Link>
-        <Flex gap={2}>
-          <Link as={GatsbyLink} to='/presse'>
-            Presse
-          </Link>
-          |
-          <Link as={GatsbyLink} to='/mentions-legales'>
-            Mentions légales
-          </Link>
+        <Flex sx={{ '&:hover > a:not(:hover)': { textDecor: 'none' } }}>
+          {FOOTER_NAV.map(({ href, label }) => (
+            <Link
+              as={GatsbyLink}
+              to={href}
+              textDecor={location.pathname === href ? 'underline' : ''}
+              display='inline-block'
+              px={2}
+              sx={{ '&:not(:last-child)': { borderRight: '1px solid currentColor' } }}
+            >
+              {label}
+            </Link>
+          ))}
         </Flex>
       </Flex>
     </Box>

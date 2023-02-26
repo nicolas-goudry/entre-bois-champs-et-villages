@@ -107,7 +107,7 @@ export default function LayoutIndex({ children, location }) {
     <Flex bg='green.50' direction='column' minH='100vh'>
       <Header location={location} />
       <MDXProvider components={mdxComponents}>{children}</MDXProvider>
-      <Footer />
+      <Footer location={location} />
     </Flex>
   )
 }

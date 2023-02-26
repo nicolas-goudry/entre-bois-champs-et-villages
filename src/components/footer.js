@@ -16,9 +16,15 @@ export default function Footer() {
         >
           <FontAwesomeIcon fixedWidth icon={faFacebook} size='2x' />
         </Link>
-        <Link as={GatsbyLink} to='/mentions-legales'>
-          Mentions légales
-        </Link>
+        <Flex gap={2}>
+          <Link as={GatsbyLink} to='/presse'>
+            Presse
+          </Link>
+          |
+          <Link as={GatsbyLink} to='/mentions-legales'>
+            Mentions légales
+          </Link>
+        </Flex>
       </Flex>
     </Box>
   )

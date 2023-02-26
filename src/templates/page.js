@@ -66,9 +66,9 @@ export default function PageTemplate({ data }) {
         </Box>
       )}
       <Box as='main' flex={1}>
-        <Box maxW='6xl' mx='auto' my={8} w='100%'>
+        <Box maxW='6xl' mx='auto' mt={8} mb={16} w='100%'>
           <Flex direction={{ base: 'column', lg: 'row' }}>
-            <Box px={4}>
+            <Box px={4} overflow='hidden'>
               <Markdown>{data?.page?.markdown}</Markdown>
             </Box>
             {data?.page?.name === 'Accueil' && (

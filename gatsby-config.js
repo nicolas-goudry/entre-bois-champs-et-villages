@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
@@ -8,38 +10,23 @@ module.exports = {
   },
   trailingSlash: 'never',
   plugins: [
-    'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-layout',
     {
       resolve: 'gatsby-source-google-docs',
       options: {
-        folder: '11qX4WVrzjaqiXwv4m4irpJuner7KqrZ3',
+        folder: process.env.FOLDER_ID,
         createPages: true,
         debug: process.env.NODE_ENV !== 'production',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        gatsbyRemarkPlugins: [
-          // You need some transformations?
-          // Checkout https://www.gatsbyjs.com/plugins/?=gatsby-remark
-          // And pick-up some plugins
-          'gatsby-remark-images',
-        ],
       },
     },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/,
+          include: /.*\.svg$/,
         },
       },
     },
+    'gatsby-plugin-layout',
     {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {
@@ -58,6 +45,20 @@ module.exports = {
          * if true, will render `<ChakraBaseProvider>`
          */
         isBaseProvider: false,
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        gatsbyRemarkPlugins: [
+          // You need some transformations?
+          // Checkout https://www.gatsbyjs.com/plugins/?=gatsby-remark
+          // And pick-up some plugins
+          'gatsby-remark-images',
+        ],
       },
     },
   ],

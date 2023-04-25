@@ -1,10 +1,10 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+<p align="center" class="logo">
+  <img alt="Entre Bois, Champs et Villages" src="./src/assets/logo_green.png" width="120" />
 </p>
+
 <h1 align="center">
-  Gatsby minimal starter
+  Entre Bois,<br/>
+  Champs et Villages
 </h1>
 
 ## 🚀 Quick start
